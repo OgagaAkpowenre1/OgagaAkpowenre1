@@ -18,7 +18,9 @@ export default function Movie(props) {
           )}
         </div>
         <div className="card-content">
-            <p><a href="">More details</a></p>
+          <p>
+            <a href="#" onClick={() => props.viewMovieInfo(props.movieId)}>More details</a>
+          </p>
         </div>
       </div>
     </div>

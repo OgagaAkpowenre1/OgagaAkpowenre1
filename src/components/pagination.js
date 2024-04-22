@@ -1,8 +1,8 @@
 export default function Pagination(props) {
   const pageLinks = [];
 
-  for (let i = 1; i <= props.numberPages + 1; i++) {
-    let active = props.currentPage == i ? "active" : "";
+  for (let i = 1; i <= props.numberPages; i++) {
+    let active = (props.currentPage === i ? "active" : "");
 
     pageLinks.push(
       <li
@@ -30,7 +30,7 @@ export default function Pagination(props) {
             ``
           )}
           {pageLinks}
-          {props.currentPage < props.numberPages + 1 ? (
+          {props.currentPage < props.numberPages ? (
             <li
               className={`waves-effect`}
               onClick={() => props.nextPage(props.currentPage + 1)}
